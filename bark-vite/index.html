@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARK Protocol Sample App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #f90;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #f60;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f90;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .feature-details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .card:hover .feature-details {
+            display: block;
+        }
+
+        .feature-details h3 {
+            margin-top: 0;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card-button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f90;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #f60;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .copyright {
+            font-size: 14px;
+        }
+
+        .terms-link,
+        .privacy-link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .terms-link:hover,
+        .privacy-link:hover {
+            color: #f90;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BARK Protocol</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <img src="bark-logo.png" alt="BARK Logo" width="100">
+        </div>
+        <p>Welcome to the BARK Micropayments sample app. Explore the features below:</p>
+
+        <!-- Feature cards with dynamic content -->
+        <div class="card">
+            <h2>Payments</h2>
+            <div class="feature-details">
+                <h3>Micropayments</h3>
+                <p>Initiate micropayments securely using BARK, SOL, or USDC.</p>
+                <div class="card-buttons">
+                    <button class="card-button" onclick="initiateMicropayment()">Initiate Payment</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more feature cards here -->
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; 2024 BARK Protocol. All rights reserved.
+        </div>
+        <div>
+            <a href="#" class="terms-link">Terms of Use</a>
+            <span>|</span>
+            <a href="#" class="privacy-link">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        function initiateMicropayment() {
+            // Implement logic to initiate micropayment
+            alert("Initiating micropayment...");
+        }
+    </script>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
