@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARK Protocol Sample App</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         /* General Styles */
         body {
@@ -17,35 +18,41 @@
         }
 
         header {
-            background-color: #f90;
-            color: #fff;
+            background-color: #ffffff;
+            color: #333;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
-            background-color: #f60;
+            background-color: #f5f5f5;
             transition: background-color 0.3s ease;
+            font-weight: 500;
         }
 
         nav a:hover {
             background-color: #f90;
+            color: #fff;
         }
 
         main {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
         }
 
@@ -55,10 +62,17 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .card h2 {
             margin-top: 0;
+            font-family: 'Poppins', sans-serif;
         }
 
         .feature-details {
@@ -72,6 +86,7 @@
 
         .feature-details h3 {
             margin-top: 0;
+            font-family: 'Poppins', sans-serif;
         }
 
         .card-buttons {
@@ -90,6 +105,7 @@
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
         }
 
         .card-button:hover {
@@ -129,16 +145,14 @@
             font-size: 14px;
         }
 
-        .terms-link,
-        .privacy-link {
+        .terms-link, .privacy-link {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s ease;
         }
 
-        .terms-link:hover,
-        .privacy-link:hover {
+        .terms-link:hover, .privacy-link:hover {
             color: #f90;
         }
 
@@ -149,6 +163,14 @@
 
             nav a {
                 margin: 5px;
+            }
+
+            .card-buttons {
+                flex-direction: column;
+            }
+
+            .card-button {
+                margin: 5px 0;
             }
         }
     </style>
@@ -166,12 +188,11 @@
     </header>
 
     <main>
-        <div>
+        <div class="logo-container" style="text-align: center;">
             <img src="bark-logo.png" alt="BARK Logo" width="100">
         </div>
         <p>Welcome to the BARK Micropayments sample app. Explore the features below:</p>
 
-        <!-- Feature cards with dynamic content -->
         <div class="card">
             <h2>Payments</h2>
             <div class="feature-details">
@@ -179,11 +200,12 @@
                 <p>Initiate micropayments securely using BARK, SOL, or USDC.</p>
                 <div class="card-buttons">
                     <button class="card-button" onclick="initiateMicropayment()">Initiate Payment</button>
+                    <button class="card-button" onclick="checkBalance()">Check Balance</button>
                 </div>
             </div>
         </div>
 
-        <!-- Add more feature cards here -->
+        <!-- Additional feature cards can be added here -->
 
     </main>
 
@@ -211,10 +233,11 @@
             // Implement logic to initiate micropayment
             alert("Initiating micropayment...");
         }
+
+        function checkBalance() {
+            // Implement logic to check balance
+            alert("Checking balance...");
+        }
     </script>
-
-    <!-- Font Awesome icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
-
 </html>
